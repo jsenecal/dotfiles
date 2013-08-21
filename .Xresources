@@ -1,0 +1,21 @@
+!! sym link to a colorscheme
+#include ".colors/current"
+
+xft.dpi:                    96
+xft.rgb:                    true
+xft.antialias:              false
+xft.hinting:                true
+
+*.font:                     xft:Ubuntu Mono:pixelsize=14,style=regular
+
+!! edwin needs fixed fonts
+edwin*font:                 fixed
+
+URxvt.iso14755:             false
+URxvt.scrollBar:            false
+URxvt.mouseWheelScrollPage: true
+
+URxvt.perl-ext-common:      default,matcher
+URxvt.urlLauncher:          /usr/bin/chromium
+URxvt.matcher.button:       1
+URxvt.underlineURLs:        true

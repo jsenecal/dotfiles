@@ -1,0 +1,9 @@
+[submodule ".vim/bundle/molokai"]
+	path = .vim/bundle/molokai
+	url = git@github.com:tomasr/molokai.git
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim
+[submodule ".vim/bundle/html5.vim"]
+	path = .vim/bundle/html5.vim
+	url = git@github.com:othree/html5.vim

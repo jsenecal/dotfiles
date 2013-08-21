@@ -1,0 +1,14 @@
+# display
+OPTIONS=boulder:0, color, hilite_pet, safe_pet
+
+# end game
+OPTIONS=scores:10t 3a o, tombstone, disclose:+i+a+v+g+c
+
+# environment
+OPTIONS=catname:maru, dogname:cyborg, fruit:pineapple
+
+# character
+OPTIONS=gender:male, align:neutral, role:wizard, race:human, name:brainss
+
+# behavior
+OPTIONS=sortpack, autoquiver, !autopickup

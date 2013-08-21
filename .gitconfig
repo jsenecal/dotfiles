@@ -1,0 +1,20 @@
+[user]
+	name = Brian Hassinger
+	email = brian.a.hassinger@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[alias]
+	aa = add --all
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	lg = log --oneline --graph -n10
+	df = diff
+	dc = diff --cached
+	last = log -n1
+	sb = show-branch
+	au = add -u
+[color]
+	ui = auto

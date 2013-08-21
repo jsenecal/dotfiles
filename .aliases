@@ -1,0 +1,18 @@
+# Color
+alias grep='grep --color=auto'
+alias ls='ls --color=auto'
+
+# TODO: Only alias these if pacman is installed
+alias pacupg='sudo pacman-color -Syu'   
+alias pacin='sudo pacman-color -S'
+alias pacins='sudo pacman-color -U'
+alias pacre='sudo pacman-color -R'
+alias pacrem='sudo pacman-color -Rns'
+alias pacrep='pacman-color -Si'
+alias pacreps='pacman-color -Ss'
+alias pacloc='pacman-color -Qi'
+alias paclocs='pacman-color -Qs'
+
+# Explicit Terminal Background
+alias light='urxvt -bg #fdf6e3'
+alias dark='urxvt -bg #002b36'

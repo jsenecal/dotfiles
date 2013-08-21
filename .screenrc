@@ -1,0 +1,30 @@
+# General
+defscrollback 5000
+
+# Turn off annoying features
+startup_message off
+
+# Turn on awesome features
+nethack on
+
+term gnome-256color
+
+# 256 Colors in xterm
+#attrcolor b ".I"
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#defbce "on"
+
+# dev session
+sessionname dev
+
+#Awesome key bindings
+bind h prev
+bind j prev
+bind k next
+bind l next
+
+# We're not all perfect
+bind ^h prev
+bind ^j prev
+bind ^k next
+bind ^l next
