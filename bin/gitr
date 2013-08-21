@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for dir in `find -maxdepth 1 -type d`; do
+    STATUS=''
+    if [[ -n "$(cd $dir && git status --porcelain 2> /dev/null | grep '^[MADRC]')" ]]; then
+      STATUS+='+'; fi
+    if [[ -n "$(cd $dir && git status --porcelain 2> /dev/null | grep '^.[MDAU]')" ]]; then
+      STATUS+='!'; fi
+    if [[ -n "$(cd $dir && git status --porcelain --untracked 2> /dev/null | grep '^[?]')" ]]; then
+      STATUS+='?'; fi
+
+  if [[ -n $STATUS ]]; then
+    echo "$STATUS $dir"; fi
+done

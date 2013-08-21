@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Rewrite of perl script:
+# http://www.frexx.de/xterm-256-notes/data/256colors2.pl
+# @date: January 8, 2013 - brainss
+# @reason: an exercise to learn bash, ansi-codes are awesome too :P
+
+# control sequence initiator
+CSI="\033[";
+RESET="${CSI}0m"
+
+function print_row() {
+  for cell in $@; do
+    echo -ne "${CSI}48;5;${cell}m  ";
+  done;
+}
+
+function print_blocks() {
+  for (( i=0 ; i < 6 ; i++)); do
+    for (( j=0 ; j < 6 ; j++ )); do
+      local start=$((16+(6*i)+(36*j) ));
+      local end=$((21+(6*i)+(36*j)));
+      print_row `seq "$start" "$end"`; echo -ne "${RESET} "
+    done;
+    echo;
+  done;
+}
+
+echo -e "${RESET}Normal/Bright"
+print_row {0..7}; echo;
+print_row {8..15}; echo;
+echo -e "${RESET}Color Block"
+print_blocks
+echo -e "${RESET}Greyscale"
+print_row {232..255}

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+shopt -s nullglob
+cd /home/brainss/Pictures/wallpapers/wallpapers
+
+files=()
+for i in *.jpg *.png; do
+  [[ -f $i ]] && files+=("$i")
+done
+range=${#files[@]}
+
+((range)) && feh --bg-scale "${files[RANDOM % range]}"

@@ -1,0 +1,40 @@
+#!/bin/bash
+echo 'Dotfiles - "Brainss" Brian Hassinger';
+
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then cat <<HELP
+Usage: $(basename "$0")
+
+See the README for documentation
+https://github.com/brainss/dotfiles
+
+License/MIT 2012 "Brainss" Brian Hassinger
+Heavily Influenced by "Cowboy" Ben Alman
+HELP
+exit;
+fi;
+
+# Logging
+function e_header()   { echo -e "\n\033[1m$@\033[0m"; }
+function e_success()  { echo -e "\n\033[32m✔\033[0m $@"; }
+function e_error()    { echo -e "\n\033[31m✖\033[0m $@"; }
+function e_arrow()    { echo -e "\n\033[33m➜\033[0m $@"; }
+
+
+function copy() {
+    rsync --exclude ".git/" --exclude ".gitignore" --exclude "README.md" --exclude "*.sw?" -av . ~
+}
+
+cd ~/.dotfiles
+git pull
+
+if [ "$1" == "--force" -o "$1" == "-f" ]; then
+  copy
+else
+  read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    copy
+  fi
+fi
+unset copy
+source ~/.bashrc
