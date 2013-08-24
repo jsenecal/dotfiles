@@ -1,57 +1,57 @@
 dotfiles
 -----------
 
-## Todo list
-[] Consider using `.profile` for shell initialization
+### Todo list
+* Consider using `.profile` for shell initialization
 
-### .aliases
+#### .aliases
 A convenient place to store aliases
 
-### .bash_logout
+#### .bash_logout
 This isn't used rn, consider marking for removal
 
-### .bashrc
+#### .bashrc
 Consider marking for removal
 
-### bin/
+#### bin/
 Store scripts in here
 
-### .colors/
+#### .colors/
 X color schemes can go here
 
-### .gitconfig
+#### .gitconfig
 Git config :)
 
-### .irssi/
+#### .irssi/
 Settings for irssi
 
-### .jshintrc
-### .nethackrc
+#### .jshintrc
+#### .nethackrc
 You're a wizard Harry.
 
-### .screenrc
+#### .screenrc
 Pretty simplistic, going to switch to tmux soon
 
-### .vim/
+#### .vim/
 Vim colorschemes and plugins. Uses pathogen to bundle
 
-### .vimrc
+#### .vimrc
 Love this thing.
 
-### .xinitrc
+#### .xinitrc
 Needs some editing
 
-### .Xmodmap
+#### .Xmodmap
 Map caps-lock to ctrl - essential
 
-### .Xresources
+#### .Xresources
 Setup font/colors and handle urls
 
-### .zsh/
+#### .zsh/
 zsh plugins, this could use some work
 
-### .zshenv
+#### .zshenv
 Setup the env
 
-### .zshrc
+#### .zshrc
  Config for zsh. I :heart: my prompt.
