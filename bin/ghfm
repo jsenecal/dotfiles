@@ -1,0 +1,29 @@
+#!/usr/bin/env zsh
+
+# USAGE: ghfm [markdown]
+# Render a markdown file with the Github API
+# and open in chrome
+
+API='https://api.github.com'
+ENDPOINT='/markdown'
+
+JSON=`node -e "console.log(JSON.stringify({text: require('fs').readFileSync(\"$1\").toString()}))"`
+RENDERED=`curl -d $JSON ${API}${ENDPOINT}`
+
+HTML=`cat << ENDCAT
+<html>
+  <head>
+    <link href="https://github.global.ssl.fastly.net/assets/github-f226abc7983f8566b17d24236adae64ba647ffea.css" media="all" rel="stylesheet" type="text/css">
+    <link href="https://github.global.ssl.fastly.net/assets/github2-6edea06c20f02c9c2ae32842c7455d50c08c3f69.css" media="all" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="readme">
+      <article class="markdown-body entry-content">
+        $RENDERED
+      </article>
+    </div>
+  </body>
+</html>
+ENDCAT`
+
+chromium-browser =(echo ${HTML})
