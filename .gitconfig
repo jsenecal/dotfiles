@@ -3,7 +3,6 @@
 	email = brian.a.hassinger@gmail.com
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore_global
 [alias]
 	aa = add --all
 	st = status

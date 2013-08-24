@@ -22,11 +22,6 @@ X color schemes can go here
 ### .gitconfig
 Git config :)
 
-### .gitignore_global
-Been using this for a while, but I'd rather have project specific
-settings. That way if someone clones a repo, all common ignores are
-included 
-
 ### .irssi/
 Settings for irssi
 
