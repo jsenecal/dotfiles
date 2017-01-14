@@ -26,10 +26,4 @@ fi
 # exec startxfce4
 # exec startfluxbox
 
-# dwm status bar - i don't like having WM specific settings in here
-while true; do
-  xsetroot -name "$(date +"%F %R")"
-  sleep 1m # update evey minute
-done & # xinit needs this in the BG
-
-exec dwm
+exec awesomewm
